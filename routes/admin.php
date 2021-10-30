@@ -27,3 +27,7 @@ Route::get('/usuario', function(){
 Route::get('/obras', function(){
     return view('admin.obras');
 });
+
+Route::get('/obra', function(){
+    return view('admin.obra');
+});

@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel Rox. Obras</p>
+    <p class="text-center">Obras</p>
 @stop
 
 @section('css')

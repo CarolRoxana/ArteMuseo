@@ -3,12 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Usuarios</h1>
-    <button class="button" type="button" onclick="window.location='usuario'">Usuario nuevo</button>
+    <h1 class="text-center">Usuarios</h1> <br>
+    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='usuario'">Usuario nuevo </button>
+    
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel Rox. USUARIO</p>
+    <p class="text-center"> Registro</p>
 @stop
 
 @section('css')

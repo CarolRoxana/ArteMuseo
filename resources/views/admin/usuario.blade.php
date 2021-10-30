@@ -3,11 +3,86 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Usuario nuevo</h1>
+    <h1  class="text-center bg-danger" >Museo de Artes CAMARO</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel Rox. USUARIO</p>
+    <p class="text-center">Bienvendido usuario</p>
+
+<div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+                    <form class="bg-white py-2 px-4 shadow rounded mg-2">
+                    <h4 class=" text-center ">Nombre usuaro</h4>
+                        <hr>
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="name">      
+                    </form>
+                    <br>
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                    <h4 class=" text-center">Contraseña</h4>
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="contrasena">
+                        <hr>
+                    </form>
+                        <br>
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                    <h4 class=" text-center">Email</h4>
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="Email">
+                        <hr>
+                    </form>
+
+                    <br>
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                    <h4 class=" text-center">Nick name</h4>
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="name">
+                    <hr>
+                    </form>
+                    <br>
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                    <h4 class=" text-center">Tipo usuario</h4>
+                   <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="">
+                    <hr>
+                    </form>
+                    <br>
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                    <h4 class=" text-center">Tipo tarjeta</h4> 
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="">
+                    <hr>
+                    </form>
+                    <br>
+                    
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                    <h4 class=" text-center">Código</h4> 
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="codigo">
+                        <hr>
+                    </form> 
+                    <br>       
+                 </div>
+     </div>
+</div>
+
+<button class="btn btn-primary btn-lg btn-block" onclick="window.location='obras'">Registrar</button><br>
+<a href=""></a>
+<footer class="text-center bg-grey"> @ Todos lo derechos reservados </footer><br>
+
 @stop
 
 @section('css')
