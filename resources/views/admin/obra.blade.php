@@ -49,9 +49,8 @@
                     <br>
 
                     <form class="bg-white py-2 px-4 shadow rounded">
-                    <h4 class=" text-center">Imagen de la obra</h4>
-                    <input class="form-control border-0 bg-light shadow-sm" 
-                    type="text" 
+                    <h4 class=" text-center">Imagen de la obraaaa</h4>
+                    <input type="file" class="form-control border-0 bg-light shadow-sm"  
                     name=" ">
                         <hr>
                     </form>
@@ -63,7 +62,7 @@
      </div>
 </div>
 
-<button class="btn btn-primary btn-lg btn-block" onclick="window.location='obras'">Agregar</button><br>
+<button class="btn btn-primary btn-lg btn-block" onclick="window.location='obras_registro'">Agregar</button><br>
 
 <footer class="text-center bg-grey"> @ Todos lo derechos reservados </footer><br>
 

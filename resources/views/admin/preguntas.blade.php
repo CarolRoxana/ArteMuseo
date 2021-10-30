@@ -3,6 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+@if($registrado == true)
+            <h4 style="display: inline-block" style="color: green">Registro guardado satisfactoriamente</h4><br>
+        @endif
     <h1 style="display: inline-block">Preguntas de seguridad</h1>
     <button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='pregunta'">Pregunta nueva</button>
 @stop

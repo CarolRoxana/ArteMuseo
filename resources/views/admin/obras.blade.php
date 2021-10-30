@@ -3,8 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+@if($registrado == 1)
+    <h4 style="display: inline-block" style="color: green">Registro guardado satisfactoriamente</h4><br>
+@endif
 <h1 style="display: inline-block">Obras</h1>
-<button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='obra'">Añadir Obra</button>
+<button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='obra'">Añadir Obras</button>
 <br>
 <p>Estado de obra:</p>
   <div>
@@ -19,7 +22,7 @@
     <input type="radio" id="contactChoice3"
      name="contact" value="mail">
     <label for="contactChoice3">Disponible</label>
-    <button style="margin-left: 60%; display: inline-block; margin-top: -70px" class="btn btn-primary" type="button" onclick="window.location='obras'">Filtrar Obras por estado</button>
+    <button style="margin-left: 60%; display: inline-block; margin-top: -70px" class="btn btn-primary" type="button" onclick="window.location='obras_filtro'">Filtrar Obras por estado</button>
   </div>
 @stop
 

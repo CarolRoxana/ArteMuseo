@@ -3,6 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+@if($registrado == 1)
+    <h4 style="display: inline-block" style="color: green">Registro guardado satisfactoriamente</h4><br>
+@endif
     <h1 style="display: inline-block">Artistas</h1>
     <button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='artista'">Artista nuevo</button>
 @stop

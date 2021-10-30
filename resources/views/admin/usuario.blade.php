@@ -129,7 +129,7 @@
      </div>
 </div>
 
-<button class="btn btn-primary btn-lg btn-block" onclick="window.location='obras'">Registrar</button><br>
+<button class="btn btn-primary btn-lg btn-block" onclick="window.location='usuarios_registrado'">Registrar</button><br>
 <a href=""></a>
 <footer class="text-center bg-grey"> @ Todos lo derechos reservados </footer><br>
 

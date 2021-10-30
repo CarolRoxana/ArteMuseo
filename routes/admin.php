@@ -22,11 +22,17 @@ Route::get('/', [ObraController::class, 'index']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
 
+Route::get('/usuarios_registrado', [UsuarioController::class, 'index_registrado']);
+
 Route::get('/usuario', function(){
     return view('admin.usuario');
 });
 
 Route::get('/obras', [ObraController::class, 'index']);
+
+Route::get('/obras_registro', [ObraController::class, 'index_registrado']);
+
+Route::get('/obras_filtro', [ObraController::class, 'index_filtro']);
 
 Route::get('/obra', function(){
     return view('admin.obra');
@@ -34,17 +40,23 @@ Route::get('/obra', function(){
 
 Route::get('/artistas', [ArtistaControler::class, 'index']);
 
+Route::get('/artistas_registrado', [ArtistaControler::class, 'index_registrado']);
+
 Route::get('/artista', function(){
     return view('admin.artista');
 });
 
 Route::get('/generos', [GeneroController::class, 'index']);
 
+Route::get('/generos_registrado', [GeneroController::class, 'index_registrado']);
+
 Route::get('/genero', function(){
     return view('admin.genero');
 });
 
 Route::get('/preguntas', [PreguntaController::class, 'index']);
+
+Route::get('/preguntas_registrado', [PreguntaController::class, 'index_registrado']);
 
 Route::get('/pregunta', function(){
     return view('admin.pregunta');
