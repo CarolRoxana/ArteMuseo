@@ -50,9 +50,12 @@
 
                     <form class="bg-white py-2 px-4 shadow rounded">
                     <h4 class=" text-center">Imagen de la obra</h4>
-                    <input img="">
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name=" ">
                         <hr>
                     </form>
+                    <br>
 
 
                     <br><br>       

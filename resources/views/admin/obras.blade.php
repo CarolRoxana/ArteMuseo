@@ -47,7 +47,7 @@
                         <td class="bg-danger">{{ $row->Estado }}</td>
                      @endif
                      <td class="bg-warning">{{ $row->Precio }}$</td>
-                     <td class="bg-warning">{{ $row->img }}</td>
+                     <td class="bg-warning" ><img src="{{$row->img}} "width="100" height="100"></td>
                      <td class="bg-warning">{{ $row->artistaNombre }} {{ $row->artistaApellido }}</td>
                      <td class="bg-succes">
                         @if($row->Estado =='Disponible')   

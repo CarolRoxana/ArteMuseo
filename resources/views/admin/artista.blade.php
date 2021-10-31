@@ -21,6 +21,15 @@
                     </form>
                     <br>
 
+                    <form class="bg-white py-2 px-4 shadow rounded mg-2">
+                    <h4 class=" text-center ">Apellido</h4>
+                        <hr>
+                    <input class="form-control border-0 bg-light shadow-sm" 
+                    type="text" 
+                    name="name">      
+                    </form>
+                    <br>
+
                     <form class="bg-white py-2 px-4 shadow rounded">
                     <h4 class=" text-center">Email</h4>
                     <input class="form-control border-0 bg-light shadow-sm" 

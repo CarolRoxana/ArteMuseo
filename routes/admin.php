@@ -17,9 +17,8 @@ use App\Http\Controllers\PreguntaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
-    return view('admin.home');
-});
+
+Route::get('/', [ObraController::class, 'index']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
 
