@@ -74,7 +74,57 @@
                     name="codigo">
                         <hr>
                     </form> 
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                        <h4 class=" text-center">Pregunta de seguridad 1</h4> 
+                        <select class="form-select form-select-lg mb-3 selectpicker" style="margin-left: 30%" aria-label=".form-select-lg example">
+                            <option selected>Pregunta de seguridad</option>
+                            <option value="1">Nombre Mascota</option>
+                            <option value="2">Nombre Mama</option>
+                            <option value="3">Comida Favorita</option>
+                            <option value="3">Lugar Favorito</option>
+                          </select>
+                        <h4 class=" text-center">Respuesta de seguridad 1</h4> 
+                        <input class="form-control border-0 bg-light shadow-sm" 
+                        type="text" 
+                        name="respuesta">
+                            <hr>
+                    </form> 
                     <br>       
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                        <h4 class=" text-center">Pregunta de seguridad 2</h4> 
+                        <select class="form-select form-select-lg mb-3 selectpicker" style="margin-left: 30%" aria-label=".form-select-lg example">
+                            <option selected>Pregunta de seguridad</option>
+                            <option value="1">Nombre Mascota</option>
+                            <option value="2">Nombre Mama</option>
+                            <option value="3">Comida Favorita</option>
+                            <option value="3">Lugar Favorito</option>
+                          </select>
+                        <h4 class=" text-center">Respuesta de seguridad 2</h4> 
+                        <input class="form-control border-0 bg-light shadow-sm" 
+                        type="text" 
+                        name="respuesta">
+                            <hr>
+                    </form> 
+                    <br> 
+
+                    <form class="bg-white py-2 px-4 shadow rounded">
+                        <h4 class=" text-center">Pregunta de seguridad 3</h4> 
+                        <select class="form-select form-select-lg mb-3 selectpicker" style="margin-left: 30%" aria-label=".form-select-lg example">
+                            <option selected>Pregunta de seguridad</option>
+                            <option value="1">Nombre Mascota</option>
+                            <option value="2">Nombre Mama</option>
+                            <option value="3">Comida Favorita</option>
+                            <option value="3">Lugar Favorito</option>
+                          </select>
+                        <h4 class=" text-center">Respuesta de seguridad 3</h4> 
+                        <input class="form-control border-0 bg-light shadow-sm" 
+                        type="text" 
+                        name="respuesta">
+                            <hr>
+                    </form> 
+                    <br> 
                  </div>
      </div>
 </div>

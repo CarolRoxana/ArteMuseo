@@ -5,6 +5,22 @@
 @section('content_header')
 <h1 style="display: inline-block">Obras</h1>
 <button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='obra'">Añadir Obra</button>
+<br>
+<p>Estado de obra:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+     name="contact" value="email">
+    <label for="contactChoice1">Vendido</label>
+
+    <input type="radio" id="contactChoice2"
+     name="contact" value="phone">
+    <label for="contactChoice2">Reservado</label>
+
+    <input type="radio" id="contactChoice3"
+     name="contact" value="mail">
+    <label for="contactChoice3">Disponible</label>
+    <button style="margin-left: 60%; display: inline-block; margin-top: -70px" class="btn btn-primary" type="button" onclick="window.location='obras'">Filtrar Obras por estado</button>
+  </div>
 @stop
 
 @section('content')
@@ -37,6 +53,7 @@
                         @if($row->Estado =='Disponible')   
                             <button class="btn btn-primary">Comprar</button>
                         @endif
+                        <button class="btn btn-success">Detalles</button>
                     </td>
              </tr>
              @endforeach
