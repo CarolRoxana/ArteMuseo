@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\ObraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('/usuario', function(){
 Route::get('/obras', function(){
     return view('admin.obras');
 });
+
+Route::get('/obras', [ObraController::class, 'index']);
 
 Route::get('/obra', function(){
     return view('admin.obra');

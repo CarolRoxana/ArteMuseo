@@ -3,11 +3,44 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Obras</h1>
+<h1 style="display: inline-block">Obras</h1>
+<button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='obra'">Añadir Obra</button>
 @stop
 
 @section('content')
-    <p class="text-center">Obras</p>
+    <div class="container">
+        <table id="empleados" class="table table-striped table-bordered" style="width:100%; white-space:nowrap;" >
+             <thead>
+                 <tr>
+                     <th>Nombre</th>
+                     <th>Estado</th>
+                     <th>Precio</th>
+                     <th>Imagen</th>
+                     <th>Acciones</th>
+                 </tr>
+             </thead>
+             <tbody>
+             @foreach($obras as $row)
+             <tr>
+                     <td class="bg-warning">{{ $row->Name }}</td>
+                     @if($row->Estado =='Disponible' ||  $row->Estado =='Dispponible')
+                        <td class="bg-success">{{ $row->Estado }}</td>
+                     @endif
+                     @if($row->Estado !='Disponible' && $row->Estado !='Dispponible')
+                        <td class="bg-danger">{{ $row->Estado }}</td>
+                     @endif
+                     <td class="bg-warning">{{ $row->Precio }}</td>
+                     <td class="bg-warning"></td>
+                     <td class="bg-succes">
+                        @if($row->Estado =='Disponible')   
+                            <button class="btn btn-primary">Comprar</button>
+                        @endif
+                    </td>
+             </tr>
+             @endforeach
+             </tbody>
+         </table>
+        </div>
 @stop
 
 @section('css')
