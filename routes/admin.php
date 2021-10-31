@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ObraController;
 use App\Http\Controllers\ArtistaControler;
+use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\PreguntaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +37,16 @@ Route::get('/artistas', [ArtistaControler::class, 'index']);
 
 Route::get('/artista', function(){
     return view('admin.artista');
+});
+
+Route::get('/generos', [GeneroController::class, 'index']);
+
+Route::get('/genero', function(){
+    return view('admin.genero');
+});
+
+Route::get('/preguntas', [PreguntaController::class, 'index']);
+
+Route::get('/pregunta', function(){
+    return view('admin.pregunta');
 });

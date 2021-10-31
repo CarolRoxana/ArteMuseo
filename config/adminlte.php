@@ -271,12 +271,17 @@ return [
         [
             'text'       => 'Genero',
             'icon_color' => 'cyan',
-            'url'        => '#',
+            'url'        => 'admin/generos',
         ],
         [
             'text'       => 'Membresia',
             'icon_color' => 'blue',
             'url'        => '#',
+        ],
+        [
+            'text'       => 'Preguntas de seguridad',
+            'icon_color' => 'orange',
+            'url'        => 'admin/preguntas',
         ],
     ],
 
