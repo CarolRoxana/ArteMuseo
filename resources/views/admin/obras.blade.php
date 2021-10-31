@@ -16,6 +16,7 @@
                      <th>Estado</th>
                      <th>Precio</th>
                      <th>Imagen</th>
+                     <th>Artista</th>
                      <th>Acciones</th>
                  </tr>
              </thead>
@@ -29,8 +30,9 @@
                      @if($row->Estado !='Disponible' && $row->Estado !='Dispponible')
                         <td class="bg-danger">{{ $row->Estado }}</td>
                      @endif
-                     <td class="bg-warning">{{ $row->Precio }}</td>
-                     <td class="bg-warning"></td>
+                     <td class="bg-warning">{{ $row->Precio }}$</td>
+                     <td class="bg-warning">{{ $row->img }}</td>
+                     <td class="bg-warning">{{ $row->artistaNombre }} {{ $row->artistaApellido }}</td>
                      <td class="bg-succes">
                         @if($row->Estado =='Disponible')   
                             <button class="btn btn-primary">Comprar</button>
