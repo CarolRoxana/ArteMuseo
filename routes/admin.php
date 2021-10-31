@@ -15,3 +15,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('admin.home');
 });
+
+Route::get('/usuarios', function(){
+    return view('admin.usuarios');
+});
+
+Route::get('/usuario', function(){
+    return view('admin.usuario');
+});
+
+Route::get('/obras', function(){
+    return view('admin.obras');
+});
