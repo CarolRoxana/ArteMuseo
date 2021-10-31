@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,6 @@ Route::get('/', function(){
     return view('admin.home');
 });
 
-Route::get('/usuarios', function(){
-    return view('admin.usuarios');
-});
-
 Route::get('/usuario', function(){
     return view('admin.usuario');
 });
@@ -31,3 +28,5 @@ Route::get('/obras', function(){
 Route::get('/obra', function(){
     return view('admin.obra');
 });
+
+Route::get('/usuarios', [UsuarioController::class, 'index']);
