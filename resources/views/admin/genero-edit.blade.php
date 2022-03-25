@@ -7,18 +7,20 @@
 @stop
 
 @section('content')
-    <p class="text-center">Crear Genero</p>
+    <p class="text-center">Editar Genero</p>
 
 <div class="container">
-    <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/genero' }}"  method="POST" >
+    <form class="bg-white py-2 px-4 shadow rounded mg-2" action="/admin/genero/update/{{$genero->id}}"  method="POST" >
         @csrf
+        @method('PUT')
         <div class="row">
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Nombre Genero</h4>
                     <hr>
                 <input class="form-control border-0 bg-light shadow-sm" 
                 type="text" 
-                name="NombreGenero">      
+                name="NombreGenero"
+                value="{{ $genero->NombreGenero }}">      
                 <br>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto" style="display: none">
@@ -32,7 +34,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
             </div>
         </div>
     </form>

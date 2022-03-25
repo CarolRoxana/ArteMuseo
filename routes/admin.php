@@ -48,11 +48,13 @@ Route::get('/artista', function(){
 
 Route::get('/generos', [GeneroController::class, 'index']);
 
-Route::get('/generos_registrado', [GeneroController::class, 'index_registrado']);
-
 Route::get('/genero', function(){
     return view('admin.genero');
 });
+Route::post('/genero', [GeneroController::class, 'store']);
+Route::get('/genero/edit/{id}', [GeneroController::class, 'edit']);
+Route::put('/genero/update/{id}', [GeneroController::class, 'update']);
+Route::delete('/genero/{id}', [GeneroController::class, 'destroy']);
 
 Route::get('/preguntas', [PreguntaController::class, 'index']);
 
