@@ -3,24 +3,23 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1  class="text-center bg-danger" >Museo de Artes CAMARO</h1>
+<h1 class="text-center bg-danger">Museo de Artes CAMARO</h1>
 @stop
 
 @section('content')
-    <p class="text-center">Crear Genero</p>
+<p class="text-center">Crear Genero</p>
 
 <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                    <form class="bg-white py-2 px-4 shadow rounded mg-2">
-                    <h4 class=" text-center ">Nombre Genero</h4>
-                        <hr>
-                    <input class="form-control border-0 bg-light shadow-sm" 
-                    type="text" 
-                    name="name">      
-                    </form>
-                    <br>
-     </div>
+    <div class="row">
+        <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+            <form class="bg-white py-2 px-4 shadow rounded mg-2">
+                <h4 class=" text-center ">Nombre Genero</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="text" name="name">
+            </form>
+            <br>
+        </div>
+    </div>
 </div>
 
 <button class="btn btn-primary btn-lg btn-block" onclick="window.location='generos_registrado'">Registrar</button><br>
@@ -30,9 +29,11 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    console.log('Hi!');
+</script>
 @stop

@@ -16,46 +16,33 @@
                 <h4 class=" text-center ">Nombre artista</h4>
                 <hr>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="name">
-            </form>
-            <br>
 
-            <form class="bg-white py-2 px-4 shadow rounded mg-2">
+                <br>
                 <h4 class=" text-center ">Apellido</h4>
                 <hr>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="name">
-            </form>
-            <br>
 
-            <form class="bg-white py-2 px-4 shadow rounded">
+                <br>
                 <h4 class=" text-center">Email</h4>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="Email">
                 <hr>
-            </form>
 
-            <br>
-
-            <form class="bg-white py-2 px-4 shadow rounded">
+                <br>
                 <h4 class=" text-center">Fecha Nacimiento</h4>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="name">
                 <hr>
-            </form>
-            <br>
 
-            <form class="bg-white py-2 px-4 shadow rounded">
+                <br>
                 <h4 class=" text-center">Nacionalidad</h4>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="">
                 <hr>
-            </form>
-            <br>
 
-            <form class="bg-white py-2 px-4 shadow rounded">
+                <br>
                 <h4 class=" text-center">Biografia</h4>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="">
                 <hr>
-            </form>
-            <br>
 
-            <form class="bg-white py-2 px-4 shadow rounded">
+                <br>
                 <h4 class=" text-center">Porcentaje ganancias museo</h4>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="codigo">
                 <hr>
