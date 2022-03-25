@@ -1,25 +1,56 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use App\Models\Genero;
 
 class GeneroController extends Controller
 {
-    function index()
+    public function index()
     {
-        $registrado = false;
-        $generos = \DB::table('genero')
-        ->where('genero.bool',0)
-        ->get();
-        return view('admin.generos',  compact('generos', 'registrado'));
+        $generos = Genero::where('bool', 0)->get();
+        return view('admin.generos', compact('generos'));
     }
 
-    function index_registrado()
+    public function store(Request $request)
     {
-        $registrado = true;
-        $generos = \DB::table('genero')
-        ->get();
-        return view('admin.generos',  compact('generos', 'registrado'));
+        $request->validate([
+            'NombreGenero' => 'required',
+            'bool' => 'required'
+        ]);
+
+        Genero::create($request->all());
+
+        return Redirect::to(url('/admin/generos'));
+    }
+
+    public function edit($id)
+    {
+        $genero = Genero::where('id', $id)->first();
+        return view('admin.genero-edit', compact('genero'));
+    }
+
+    public function update($id, Request $request)
+    {   
+        $request->validate([
+            'NombreGenero' => 'required',
+            'bool' => 'required'
+        ]);
+
+        $genero = Genero::where('id', $id)->first();
+        $genero->NombreGenero = $request->NombreGenero;
+        $genero->save();
+
+        return Redirect::to(url('/admin/generos'));
+    }
+
+    public function destroy($id)
+    {   
+        $genero = Genero::where('id', $id)->first();
+        $genero->bool = 1;
+        $genero->save();
+
+        return Redirect::to(url('/admin/generos'));
     }
 }

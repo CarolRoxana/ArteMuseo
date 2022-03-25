@@ -9,6 +9,6 @@ class Genero extends Model
 {
     public $table = 'genero';
     protected $fillable = [
-        'Genero', 'bool'
+        'NombreGenero', 'bool'
     ];
 }
