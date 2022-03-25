@@ -29,14 +29,11 @@ Route::get('/usuario', function () {
 });
 
 Route::get('/obras', [ObraController::class, 'index']);
-
-Route::get('/obras_registro', [ObraController::class, 'index_registrado']);
+ 
 
 Route::get('/obras_filtro', [ObraController::class, 'index_filtro']);
-
-Route::get('/obra', function () {
-    return view('admin.obra');
-});
+Route::get('/obra', [ObraController::class, 'create']);
+Route::post('/obra', [ObraController::class, 'store']);
 
 Route::get('/artistas', [ArtistaControler::class, 'index']);
 

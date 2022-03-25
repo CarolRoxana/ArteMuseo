@@ -7,62 +7,101 @@
 @stop
 
 @section('content')
-    <p class="text-center">Obra</p>
+<p class="text-center">Crear Obra</p>
 
 <div class="container">
+    <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/obra' }}" method="POST">
+        @csrf
         <div class="row">
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                    <form class="bg-white py-2 px-4 shadow rounded mg-2">
-                    <h4 class=" text-center ">Nombre Obra</h4>
-                        <hr>
-                    <input class="form-control border-0 bg-light shadow-sm" 
-                    type="text" 
-                    name="name">      
-                    </form>
-                    <br>
+                <h4 class=" text-center ">Nombre Genero</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="text" name="Name">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+                <h4 class=" text-center ">Precio</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="number" name="Precio">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+                <h4 class=" text-center ">Pocentaje</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="number" name="Porcentaje">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+                <h4 class=" text-center ">Imagen</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="text" name="img">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+                <h4 class=" text-center ">Estado</h4>
+                <hr>
+                <select class="form-control" name="Estado">
+                    <option value="Disponible">Disponible</option>
+                    <option value="Reservado">Reservado</option>
+                    <option value="Vendido">Vendido</option>
+                </select>
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+                <h4 class=" text-center ">Artista</h4>
+                <hr>
+                <select class="form-control" name="idArtista">
+                    @foreach($artistas as $artista)
+                        <option value="{{$artista->id}}">{{$artista->Name}} {{$artista->LastaName}}</option>
+                    @endforeach
+                </select>
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+                <h4 class=" text-center ">Genero</h4>
+                <hr>
+                <select class="form-control" name="idGenero">
+                    @foreach($generos as $genero)
+                        <option value="{{$genero->id}}">{{$genero->NombreGenero}}</option>
+                    @endforeach
+                </select>
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+                <h4 class=" text-center ">Fecha Creacion</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="date" name="FechaCreacion">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" style="display: none">
+                <h4 class=" text-center ">User</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="number" value="1" name="idUser">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" style="display: none">
+                <h4 class=" text-center ">Bool</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="number" value="0" name="bool">
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </div>
+    </form>
+</div>
 
-                    <form class="bg-white py-2 px-4 shadow rounded">
-                    <h4 class=" text-center">Precio</h4>
-                    <input class="form-control border-0 bg-light shadow-sm" 
-                    type="text" 
-                    name=" ">
-                     <hr>
-                    </form>
-                    <br>
-
-                    <form class="bg-white py-2 px-4 shadow rounded">
-                    <h4 class=" text-center">Género</h4>
-                    <input class="form-control border-0 bg-light shadow-sm" 
-                    type="text" 
-                    name=" ">
-                      <hr>
-                    </form>   
-                    <br>
-
-                    <form class="bg-white py-2 px-4 shadow rounded">
-                    <h4 class=" text-center">Fecha creación</h4>
-                    <input class="form-control border-0 bg-light shadow-sm" 
-                    type="text" 
-                    name=" ">
-                        <hr>
-                    </form>
-                    <br>
-
-                    <form class="bg-white py-2 px-4 shadow rounded">
+<!-- 
+         <form class="bg-white py-2 px-4 shadow rounded">
                     <h4 class=" text-center">Imagen de la obraaaa</h4>
                     <input type="file" class="form-control border-0 bg-light shadow-sm"  
                     name=" ">
                         <hr>
                     </form>
-                    <br>
-
-
-                    <br><br>       
-                 </div>
-     </div>
-</div>
-
-<button class="btn btn-primary btn-lg btn-block" onclick="window.location='obras_registro'">Agregar</button><br>
+                -->
 
 <footer class="text-center bg-grey"> @ Todos lo derechos reservados </footer><br>
 

@@ -27,7 +27,7 @@
             <tr>
                 <td class="bg-warning">{{ $row->name }}</td>
                 <td class="bg-warning">{{ $row->email }}</td>
-                <td class="bg-warning">{{ $row->NickName }}</td>
+                <td class="bg-warning">{{ $row->Nickname }}</td>
                 <td class="bg-warning">{{ $row->TipoUsuario }}</td>
                 <td class="bg-succes">
                     <button class="btn btn-primary">Editar</button>

@@ -24,6 +24,7 @@ class ObraSeeder extends Seeder
             'img' => 'ahí va la imagen',
             'idGenero' => 1,
             'idUser' => 1,
+            'idArtista' => 1,
             'bool' => 0
         ]);
     }

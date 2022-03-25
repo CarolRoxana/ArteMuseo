@@ -25,6 +25,8 @@ class CreateObra extends Migration
             $table->foreign('idGenero')->references('id')->on('genero');
             $table->integer('idUser')->unsigned();
             $table->foreign('idUser')->references('id')->on('users');
+            $table->integer('idArtista')->unsigned();
+            $table->foreign('idArtista')->references('id')->on('artista');
             $table->integer('bool');
             $table->timestamps();
         });
