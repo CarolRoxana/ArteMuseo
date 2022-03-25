@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArtistaGenero extends Model
 {
-    public $tabla = 'artistagenero';
+    public $table = 'artistagenero';
     protected $fillable = [
         'idGenero', 'idArtista'
     ];

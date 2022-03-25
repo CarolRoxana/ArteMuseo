@@ -15,7 +15,7 @@ class CreateFactura extends Migration
     public function up()
     {
         Schema::create('factura', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('Codigofactura');
             $table->timestamp('FechaCompra');
             $table->string('TipoCompra');
@@ -23,7 +23,8 @@ class CreateFactura extends Migration
             $table->integer('IvaPorcentaje');
             $table->float('PrecioTotal');
             $table->string('EstadoVenta');
-            $table->integer('idObra');
+            $table->integer('idObra')->unsigned();
+            $table->foreign('idObra')->references('id')->on('obra');
             $table->timestamps();
         });
     }

@@ -14,9 +14,10 @@ class CreateDetallegenero extends Migration
     public function up()
     {
         Schema::create('detallegenero', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('nombre');
-            $table->integer('idGenero');
+            $table->integer('idGenero')->unsigned();
+            $table->foreign('idGenero')->references('id')->on('genero');
             $table->timestamps();
         });
     }

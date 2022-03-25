@@ -18,7 +18,7 @@ class MembresiaSeeder extends Seeder
         Membresia::create([
             'Estado' => 'Comprado',
             'FechaPago' => Carbon::parse('2021-10-15'),
-            'idUser' => 5
+            'idUser' => 1
         ]);
     }
 }

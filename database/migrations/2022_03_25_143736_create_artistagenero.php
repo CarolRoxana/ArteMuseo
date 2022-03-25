@@ -14,9 +14,11 @@ class CreateArtistagenero extends Migration
     public function up()
     {
         Schema::create('artistagenero', function (Blueprint $table) {
-            $table->id();
-            $table->integer('idGenero');
-            $table->integer('idArtista');
+            $table->increments('id');
+            $table->integer('idGenero')->unsigned();
+            $table->foreign('idGenero')->references('id')->on('genero');
+            $table->integer('idArtista')->unsigned();
+            $table->foreign('idArtista')->references('id')->on('artista');
             $table->timestamps();
         });
     }

@@ -16,8 +16,8 @@ class RespuestasSeeder extends Seeder
     {
         Respuestas::create([
             'Nombre_Respuesta' => 'Pool',
-            'idUsuario' => 7,
-            'idPreguntas' => 4
+            'idUsuario' => 1,
+            'idPreguntas' => 1
         ]);
     }
 }

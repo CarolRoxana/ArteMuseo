@@ -14,10 +14,12 @@ class CreateRespuestas extends Migration
     public function up()
     {
         Schema::create('respuestas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('Nombre_Respuesta');
-            $table->integer('idUsuario');
-            $table->integer('idPreguntas');
+            $table->integer('idUsuario')->unsigned();
+            $table->foreign('idUsuario')->references('id')->on('users');
+            $table->integer('idPreguntas')->unsigned();
+            $table->foreign('idPreguntas')->references('id')->on('preguntas');
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateObradetalle extends Migration
+class CreateTablePreguntas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateObradetalle extends Migration
      */
     public function up()
     {
-        Schema::create('obradetalle', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('descripcion');
-            $table->integer('idDetalleGenero');
-            $table->integer('idObra')->unsigned();
-            $table->foreign('idObra')->references('id')->on('obra');
+        Schema::create('table_preguntas', function (Blueprint $table) {
+            $table->id();
+            $table->string('NombrePregunta');
+            $table->integer('bool');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateObradetalle extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('obradetalle');
+        Schema::dropIfExists('table_preguntas');
     }
 }

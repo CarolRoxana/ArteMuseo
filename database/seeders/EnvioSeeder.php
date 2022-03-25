@@ -17,8 +17,8 @@ class EnvioSeeder extends Seeder
         Envio::create([
             'Estado' => 'Anzoategui',
             'Direccion' => 'Barcelona - calle SanJuan Casa 8',
-            'iduser' => 7,
-            'idObra' => 5
+            'iduser' => 1,
+            'idObra' => 1
         ]);
     }
 }

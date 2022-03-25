@@ -14,11 +14,13 @@ class CreateEnvio extends Migration
     public function up()
     {
         Schema::create('envio', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('Estado');
             $table->string('Direccion');
-            $table->integer('iduser');
-            $table->integer('idObra');
+            $table->integer('iduser')->unsigned();
+            $table->foreign('iduser')->references('id')->on('users');
+            $table->integer('idObra')->unsigned();
+            $table->foreign('idObra')->references('id')->on('obra');
             $table->timestamps();
         });
     }

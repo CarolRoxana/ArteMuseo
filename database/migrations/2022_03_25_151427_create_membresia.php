@@ -14,10 +14,11 @@ class CreateMembresia extends Migration
     public function up()
     {
         Schema::create('membresia', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('Estado');
             $table->timestamp('FechaPago');
-            $table->integer('idUser');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -14,9 +14,11 @@ class CreateArtistaobra extends Migration
     public function up()
     {
         Schema::create('artistaobra', function (Blueprint $table) {
-            $table->id();
-            $table->integer('idObra');
-            $table->integer('idArtista');
+            $table->increments('id');
+            $table->integer('idObra')->unsigned();
+            $table->foreign('idObra')->references('id')->on('obra');
+            $table->integer('idArtista')->unsigned();
+            $table->foreign('idArtista')->references('id')->on('artista');
             $table->timestamps();
         });
     }

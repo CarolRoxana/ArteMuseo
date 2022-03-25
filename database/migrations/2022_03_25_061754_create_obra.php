@@ -14,15 +14,17 @@ class CreateObra extends Migration
     public function up()
     {
         Schema::create('obra', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('Name');
             $table->string('Estado');
             $table->integer('Precio');
             $table->timestamp('FechaCreacion');
             $table->string('Porcentaje');
             $table->string('img');
-            $table->integer('idGenero');
-            $table->integer('idUser');
+            $table->integer('idGenero')->unsigned();
+            $table->foreign('idGenero')->references('id')->on('genero');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users');
             $table->integer('bool');
             $table->timestamps();
         });

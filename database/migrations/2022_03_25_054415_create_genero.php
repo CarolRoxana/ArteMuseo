@@ -14,7 +14,7 @@ class CreateGenero extends Migration
     public function up()
     {
         Schema::create('genero', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('NombreGenero');
             $table->integer('bool');
             $table->timestamps();
