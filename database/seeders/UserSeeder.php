@@ -20,7 +20,23 @@ class UserSeeder extends Seeder
             'email'     =>  'admin@admin.com',
             'password'  =>   Hash::make('Admin'),
             'Nickname'  =>   'Pollito',
-            'TipoUsuario' => 'Vendedor',
+            'idRol' => 1,
+            'bool'      =>  0
+        ]);
+        User::create([
+            'name'      =>  'Artista',
+            'email'     =>  'artista@artista.com',
+            'password'  =>   Hash::make('Artista'),
+            'Nickname'  =>   'Artista',
+            'idRol' => 2,
+            'bool'      =>  0
+        ]);
+        User::create([
+            'name'      =>  'Compra',
+            'email'     =>  'compra@compra.com',
+            'password'  =>   Hash::make('Compra'),
+            'Nickname'  =>   'Comprador',
+            'idRol' => 3,
             'bool'      =>  0
         ]);
     }

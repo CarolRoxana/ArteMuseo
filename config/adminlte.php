@@ -277,6 +277,7 @@ return [
             'text'       => 'Membresia',
             'icon_color' => 'blue',
             'url'        => '#',
+            'id' => 'ejemplo',
         ],
         [
             'text'       => 'Preguntas de seguridad',

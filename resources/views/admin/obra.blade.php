@@ -34,7 +34,7 @@
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Imagen</h4>
                 <hr>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="img">
+                <input class="form-control border-0 bg-light shadow-sm" type="file" name="img">
                 <br>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto" >

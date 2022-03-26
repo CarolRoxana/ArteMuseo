@@ -13,6 +13,8 @@ class ObraController extends Controller
     {   
         $obras = Obra::where('bool', 0)->get();
         //dd($obras);
+        //$user = auth()->user()->id;
+        //dd($user);
         return view('admin.obras', compact('obras'));
     }
 
@@ -25,7 +27,21 @@ class ObraController extends Controller
     }
 
     function store(Request $request)
-    {   
+    {       
+        if ($request->hasFile('img')) {
+            $image      = $request->file('img');
+            $fileName   = time() . '.' . $image->getClientOriginalExtension();
+
+            $img = Image::make($image->getRealPath());
+            $img->resize(120, 120, function ($constraint) {
+                $constraint->aspectRatio();                 
+            });
+            $request->img = $image->getRealPath();
+            $img->stream(); // <-- Key point
+
+            //dd();
+            Storage::disk('local')->put('images/1/smalls'.'/'.$fileName, $img, 'public');
+        }
         Obra::create($request->all());
         
         return Redirect::to(url('/admin/obras'));
