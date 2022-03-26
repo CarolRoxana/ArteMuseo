@@ -261,7 +261,7 @@ return [
         [
             'text'       => 'Facturas',
             'icon_color' => 'red',
-            'url'        => 'admin/factura',
+            'url'        => 'admin/facturas',
         ],
         [
             'text'       => 'Compras',

@@ -61,7 +61,34 @@ Route::get('/pregunta', function () {
 });
 
 Route::get('/facturas', [FacturaController::class, 'index']);
-
 Route::get('/factura', function () {
     return view('admin.factura');
 });
+
+Route::get('/roles', [RolController::class, 'index']);
+Route::get('/rol', function () {
+    return view('admin.rol');
+});
+Route::post('/rol', [RolController::class, 'store']);
+Route::get('/rolPermisos/{id}', [RolController::class, 'rolPermiso']);
+Route::post('/rolPermisosStore', [RolController::class, 'rolPermisoStore']);
+Route::delete('/rolPermisos/{rol}/{id}', [RolController::class, 'rolPermisoDestroy']);
+Route::get('/rol/edit/{id}', [RolController::class, 'edit']);
+Route::put('/rol/update/{id}', [RolController::class, 'update']);
+Route::delete('/rol/{id}', [RolController::class, 'destroy']);
+
+Route::get('/permisos', [PermisoController::class, 'index']);
+Route::get('/permiso', [PermisoController::class, 'create']);
+Route::post('/permiso', [PermisoController::class, 'store']);
+Route::get('/permiso/edit/{id}', [PermisoController::class, 'edit']);
+Route::put('/permiso/update/{id}', [PermisoController::class, 'update']);
+Route::delete('/permiso/{id}', [PermisoController::class, 'destroy']);
+
+Route::get('/modulos', [ModuloController::class, 'index']);
+Route::get('/modulo', function () {
+    return view('admin.modulo');
+});
+Route::post('/modulo', [ModuloController::class, 'store']);
+Route::get('/modulo/edit/{id}', [ModuloController::class, 'edit']);
+Route::put('/modulo/update/{id}', [ModuloController::class, 'update']);
+Route::delete('/modulo/{id}', [ModuloController::class, 'destroy']);
