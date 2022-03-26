@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ObraController;
 use App\Http\Controllers\ArtistaControler;
+use App\Http\Controllers\FacturaController;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\PreguntaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +31,6 @@ Route::get('/usuario', function () {
 });
 
 Route::get('/obras', [ObraController::class, 'index']);
- 
 
 Route::get('/obras_filtro', [ObraController::class, 'index_filtro']);
 Route::get('/obra', [ObraController::class, 'create']);
@@ -61,4 +62,10 @@ Route::get('/preguntas_registrado', [PreguntaController::class, 'index_registrad
 
 Route::get('/pregunta', function () {
     return view('admin.pregunta');
+});
+
+Route::get('/facturas', [FacturaController::class, 'index']);
+
+Route::get('/factura', function () {
+    return view('admin.factura');
 });
