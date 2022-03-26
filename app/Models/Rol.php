@@ -9,6 +9,6 @@ class Rol extends Model
 {
     public $table = 'roles';
     protected $fillable = [
-        'Nombre'
+        'Nombre', 'bool'
     ];
 }

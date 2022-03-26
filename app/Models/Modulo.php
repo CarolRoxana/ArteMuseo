@@ -9,6 +9,6 @@ class Modulo extends Model
 {
     public $table = 'modulos';
     protected $fillable = [
-        'Nombre'
+        'Nombre', 'bool'
     ];
 }

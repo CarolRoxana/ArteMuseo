@@ -15,4 +15,8 @@ class RolPermiso extends Model
     public function permiso(){
         return $this->belongsTo("App\Models\Permiso","idPermiso","id");
     }
+
+    public function rol(){
+        return $this->belongsTo("App\Models\Rol","idRol","id");
+    }
 }

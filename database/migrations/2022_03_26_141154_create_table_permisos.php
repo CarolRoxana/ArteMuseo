@@ -18,6 +18,7 @@ class CreateTablePermisos extends Migration
             $table->string('Nombre');
             $table->integer('idModulo')->unsigned();
             $table->foreign('idModulo')->references('id')->on('modulos');
+            $table->integer('bool');
             $table->timestamps();
         });
     }

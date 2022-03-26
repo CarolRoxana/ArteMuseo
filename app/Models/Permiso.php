@@ -9,6 +9,10 @@ class Permiso extends Model
 {
     public $table = 'permisos';
     protected $fillable = [
-        'Nombre', 'idModulo'
+        'Nombre', 'idModulo', 'bool'
     ];
+
+    public function modulo(){
+        return $this->belongsTo("App\Models\Modulo","idModulo","id");
+    }
 }

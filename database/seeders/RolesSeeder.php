@@ -14,13 +14,20 @@ class RolesSeeder extends Seeder
     public function run()
     {
         Rol::create([
-            'Nombre' => 'Administrador'
+            'Nombre' => 'Administrador',
+            'bool' => 0
         ]);
         Rol::create([
-            'Nombre' => 'Artista'
+            'Nombre' => 'Artista',
+            'bool' => 0
         ]);
         Rol::create([
-            'Nombre' => 'Comprador'
+            'Nombre' => 'Comprador',
+            'bool' => 0
+        ]);
+        Rol::create([
+            'Nombre' => 'Vendedor',
+            'bool' => 0
         ]);
     }
 }

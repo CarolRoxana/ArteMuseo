@@ -16,22 +16,39 @@ class ModulosSeeder extends Seeder
     public function run()
     {
         Modulo::create([
-            'Nombre' => 'Obras'
+            'Nombre' => 'Obras',
+            'bool' => 0
         ]);
 
         Modulo::create([
-            'Nombre' => 'Usuarios'
+            'Nombre' => 'Usuarios',
+            'bool' => 0
         ]);
 
         Modulo::create([
-            'Nombre' => 'Artistas'
+            'Nombre' => 'Artistas',
+            'bool' => 0
         ]);
 
         Modulo::create([
-            'Nombre' => 'Generos'
+            'Nombre' => 'Generos',
+            'bool' => 0
         ]);
         Modulo::create([
-            'Nombre' => 'Compras'
+            'Nombre' => 'Compras',
+            'bool' => 0
+        ]);
+        Modulo::create([
+            'Nombre' => 'Roles',
+            'bool' => 0
+        ]);
+        Modulo::create([
+            'Nombre' => 'Modulos',
+            'bool' => 0
+        ]);
+        Modulo::create([
+            'Nombre' => 'Permisos',
+            'bool' => 0
         ]);
     }
 }

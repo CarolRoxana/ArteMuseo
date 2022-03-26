@@ -261,7 +261,7 @@ return [
         [
             'text'       => 'Facturas',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => 'admin/artistas',
         ],
         [
             'text'       => 'Compras',
@@ -277,12 +277,26 @@ return [
             'text'       => 'Membresia',
             'icon_color' => 'blue',
             'url'        => '#',
-            'id' => 'ejemplo',
         ],
         [
             'text'       => 'Preguntas de seguridad',
             'icon_color' => 'orange',
             'url'        => 'admin/preguntas',
+        ],
+        [
+            'text'       => 'Roles',
+            'icon_color' => 'white',
+            'url'        => 'admin/roles',
+        ],
+        [
+            'text'       => 'Permisos',
+            'icon_color' => 'white',
+            'url'        => 'admin/permisos',
+        ],
+        [
+            'text'       => 'Modulos',
+            'icon_color' => 'white',
+            'url'        => 'admin/modulos',
         ],
     ],
 

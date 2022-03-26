@@ -38,8 +38,21 @@ class RolesPermisosSeeder extends Seeder
             'idPermiso' => 6
         ]);
         RolPermiso::create([
+            'idRol' => 1,
+            'idPermiso' => 7
+        ]);
+        RolPermiso::create([
+            'idRol' => 1,
+            'idPermiso' => 8
+        ]);
+        RolPermiso::create([
+            'idRol' => 1,
+            'idPermiso' => 9
+        ]);
+        RolPermiso::create([
             'idRol' => 2,
             'idPermiso' => 2
         ]);
+        
     }
 }

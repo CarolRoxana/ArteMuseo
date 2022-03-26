@@ -15,28 +15,52 @@ class PermisosSeeder extends Seeder
     {
         Permiso::create([
             'Nombre' => 'Crear Obras',
-            'idModulo' => 1
+            'idModulo' => 1,
+            'bool' => 0
         ]);
         Permiso::create([
             'Nombre' => 'Crear Artista',
-            'idModulo' => 3
+            'idModulo' => 3,
+            'bool' => 0
         ]);
         Permiso::create([
             'Nombre' => 'Crear Genero',
-            'idModulo' => 4
+            'idModulo' => 4,
+            'bool' => 0
         ]);
         Permiso::create([
             'Nombre' => 'Editar Genero',
-            'idModulo' => 4
+            'idModulo' => 4,
+            'bool' => 0
         ]);
         Permiso::create([
             'Nombre' => 'Eliminar Genero',
-            'idModulo' => 4
+            'idModulo' => 4,
+            'bool' => 0
         ]);
 
         Permiso::create([
             'Nombre' => 'Gestionar usuarios',
-            'idModulo' => 2
+            'idModulo' => 2,
+            'bool' => 0
+        ]);
+
+        Permiso::create([
+            'Nombre' => 'Gestionar Roles',
+            'idModulo' => 6,
+            'bool' => 0
+        ]);
+
+        Permiso::create([
+            'Nombre' => 'Gestionar Modulos',
+            'idModulo' => 7,
+            'bool' => 0
+        ]);
+
+        Permiso::create([
+            'Nombre' => 'Gestionar Permisos',
+            'idModulo' => 8,
+            'bool' => 0
         ]);
     }
 }

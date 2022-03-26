@@ -6,6 +6,9 @@ use App\Http\Controllers\ObraController;
 use App\Http\Controllers\ArtistaControler;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\PreguntaController;
+use App\Http\Controllers\RolController;
+use App\Http\Controllers\ModuloController;
+use App\Http\Controllers\PermisoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,22 +24,17 @@ use App\Http\Controllers\PreguntaController;
 Route::get('/', [ObraController::class, 'index']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
-
 Route::get('/usuarios_registrado', [UsuarioController::class, 'index_registrado']);
-
 Route::get('/usuario', function () {
     return view('admin.usuario');
 });
 
 Route::get('/obras', [ObraController::class, 'index']);
- 
-
 Route::get('/obras_filtro', [ObraController::class, 'index_filtro']);
 Route::get('/obra', [ObraController::class, 'create']);
 Route::post('/obra', [ObraController::class, 'store']);
 
 Route::get('/artistas', [ArtistaControler::class, 'index']);
-
 Route::get('/artista', function () {
     return view('admin.artista');
 });
@@ -46,7 +44,6 @@ Route::put('/artista/update/{id}', [ArtistaControler::class, 'update']);
 Route::delete('/artista/{id}', [ArtistaControler::class, 'destroy']);
 
 Route::get('/generos', [GeneroController::class, 'index']);
-
 Route::get('/genero', function () {
     return view('admin.genero');
 });
@@ -56,9 +53,35 @@ Route::put('/genero/update/{id}', [GeneroController::class, 'update']);
 Route::delete('/genero/{id}', [GeneroController::class, 'destroy']);
 
 Route::get('/preguntas', [PreguntaController::class, 'index']);
-
 Route::get('/preguntas_registrado', [PreguntaController::class, 'index_registrado']);
-
 Route::get('/pregunta', function () {
     return view('admin.pregunta');
 });
+
+Route::get('/roles', [RolController::class, 'index']);
+Route::get('/rol', function () {
+    return view('admin.rol');
+});
+Route::post('/rol', [RolController::class, 'store']);
+Route::get('/rolPermisos/{id}', [RolController::class, 'rolPermiso']);
+Route::post('/rolPermisosStore', [RolController::class, 'rolPermisoStore']);
+Route::delete('/rolPermisos/{rol}/{id}', [RolController::class, 'rolPermisoDestroy']);
+Route::get('/rol/edit/{id}', [RolController::class, 'edit']);
+Route::put('/rol/update/{id}', [RolController::class, 'update']);
+Route::delete('/rol/{id}', [RolController::class, 'destroy']);
+
+Route::get('/modulos', [ModuloController::class, 'index']);
+Route::get('/modulo', function () {
+    return view('admin.modulo');
+});
+Route::post('/modulo', [ModuloController::class, 'store']);
+Route::get('/modulo/edit/{id}', [ModuloController::class, 'edit']);
+Route::put('/modulo/update/{id}', [ModuloController::class, 'update']);
+Route::delete('/modulo/{id}', [ModuloController::class, 'destroy']);
+
+Route::get('/permisos', [PermisoController::class, 'index']);
+Route::get('/permiso', [PermisoController::class, 'create']);
+Route::post('/permiso', [PermisoController::class, 'store']);
+Route::get('/permiso/edit/{id}', [PermisoController::class, 'edit']);
+Route::put('/permiso/update/{id}', [PermisoController::class, 'update']);
+Route::delete('/permiso/{id}', [PermisoController::class, 'destroy']);
