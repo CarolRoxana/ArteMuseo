@@ -1,8 +1,8 @@
-# Laravel 8 con Platilla AdminLTE
+# ArteMuse - Proyecto BDDII
 
 ## Comenzando 🚀
 
-_Sigue las siguientes instruscciones para clonar este repositorio en tu máquina local y poder trabajar desde el principio con la plantilla AdminLTE en Laravel 8._
+_Sigue las siguientes instruscciones para clonar este repositorio en tu máquina local y poder correr el sistema en tu local
 
 ### Pre-requisitos 📋
 
@@ -37,7 +37,7 @@ _Sigue las siguientes instrucciones para clonar el repositorio_
 _Clone el repositorio_
 
 ```
-git clone https://github.com/jorgehernandezch/Laravel-8-AdminLTE.git
+git clone https://github.com/CarolRoxana/ArteMuseo.git
 ```
 
 _Instale todas las dependencias del Proyecto con_
@@ -65,16 +65,10 @@ _Genere una nueva Key para el protecto con_
 php artisan key:generate
 ```
 
-_Corra las migraciones del proyecto con_
+_Corra las migraciones y seeders del proyecto con_
 
 ```
-php artisan migrate
-```
-
-_Corra los seeder del proyecto con_
-
-```
-php artisan db:seed
+php artisan migrate --seed
 ```
 _Corra el proyecto con_
 
@@ -86,5 +80,4 @@ _Si todo está correcto puede acceder al proyecto en la dirección http://localh
 
 
 ---
-[Jorge Edo. Hernández](https://github.com/jorgehernandezch)  
-_Ingeniero y Desarrollador Web_
+[Roxana Salazar]
