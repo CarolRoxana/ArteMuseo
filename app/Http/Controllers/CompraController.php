@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Factura;
@@ -32,7 +33,7 @@ class GeneroController extends Controller
     }
 
     public function update($id, Request $request)
-    {   
+    {
         $request->validate([
             'NombreGenero' => 'required',
             'bool' => 'required'
@@ -46,7 +47,7 @@ class GeneroController extends Controller
     }
 
     public function destroy($id)
-    {   
+    {
         $genero = Genero::where('id', $id)->first();
         $genero->bool = 1;
         $genero->save();

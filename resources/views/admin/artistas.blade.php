@@ -3,8 +3,24 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+
+@php
+$showCrearArtista = false;
+@endphp
+
+@foreach($permisos as $permiso)
+@php
+if($permiso->permiso->Nombre == "Crear Artista"){
+$showCrearArtista = true;
+}
+@endphp
+@endforeach
+
 <h1 style="display: inline-block">Artistas</h1>
+@if($showCrearArtista)
 <button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='artista'">Artista nuevo</button>
+@endif
+
 @stop
 
 @section('content')

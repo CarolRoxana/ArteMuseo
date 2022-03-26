@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Artista;
+use App\Models\RolPermiso;
 use Illuminate\Support\Facades\Redirect;
 
 class ArtistaControler extends Controller
@@ -11,7 +12,9 @@ class ArtistaControler extends Controller
     public function index()
     {
         $artistas = Artista::where('bool', 0)->get();
-        return view('admin.artistas',  compact('artistas'));
+        $userRol = auth()->user()->rol->id;
+        $permisos = RolPermiso::where('idRol', $userRol)->get();
+        return view('admin.artistas',  compact('artistas', 'permisos'));
     }
 
     public function store(Request $request)
