@@ -21,7 +21,7 @@ class ObraSeeder extends Seeder
             'Precio' => 152,
             'FechaCreacion' => Carbon::parse('2004-12-16'),
             'Porcentaje' => 5,
-            'img' => 'ahí va la imagen',
+            'img' => 'images/1648329542.jpg',
             'idGenero' => 1,
             'idUser' => 1,
             'idArtista' => 1,

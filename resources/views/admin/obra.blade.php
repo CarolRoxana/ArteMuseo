@@ -10,7 +10,7 @@
 <h4 class="text-center"><b>Crear Obra</b></h4>
 <br>
 <div class="container">
-    <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/obra' }}" method="POST">
+    <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/obra' }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
@@ -34,7 +34,13 @@
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Imagen</h4>
                 <hr>
-                <input class="form-control border-0 bg-light shadow-sm" type="file" name="img">
+                <input class="form-control border-0 bg-light shadow-sm" type="file" name="img2">
+                <br>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" style="display: none">
+                <h4 class=" text-center ">Imagen</h4>
+                <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="text" name="img" value="/">
                 <br>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">

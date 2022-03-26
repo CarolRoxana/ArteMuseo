@@ -28,19 +28,12 @@ class ObraController extends Controller
 
     function store(Request $request)
     {       
-        if ($request->hasFile('img')) {
-            $image      = $request->file('img');
+        if ($request->hasFile('img2')) {
+            $image      = $request->file('img2');
+            $destionation = "images/";
             $fileName   = time() . '.' . $image->getClientOriginalExtension();
-
-            $img = Image::make($image->getRealPath());
-            $img->resize(120, 120, function ($constraint) {
-                $constraint->aspectRatio();                 
-            });
-            $request->img = $image->getRealPath();
-            $img->stream(); // <-- Key point
-
-            //dd();
-            Storage::disk('local')->put('images/1/smalls'.'/'.$fileName, $img, 'public');
+            $imagenSubida = $request->file("img2")->move($destionation, $fileName);
+            $request->merge(['img' => $destionation.$fileName]);
         }
         Obra::create($request->all());
         
