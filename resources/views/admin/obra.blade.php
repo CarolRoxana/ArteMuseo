@@ -3,12 +3,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1  class="text-center bg-danger" >Museo de Artes CAMARO</h1>
+<h1 class="text-center bg-danger">Museo de Artes CAMARO</h1>
 @stop
 
 @section('content')
-<p class="text-center">Crear Obra</p>
-
+<h4 class="text-center"><b>Crear Obra</b></h4>
+<br>
 <div class="container">
     <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/obra' }}" method="POST">
         @csrf
@@ -37,7 +37,7 @@
                 <input class="form-control border-0 bg-light shadow-sm" type="file" name="img">
                 <br>
             </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Estado</h4>
                 <hr>
                 <select class="form-control" name="Estado">
@@ -47,22 +47,22 @@
                 </select>
                 <br>
             </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Artista</h4>
                 <hr>
                 <select class="form-control" name="idArtista">
                     @foreach($artistas as $artista)
-                        <option value="{{$artista->id}}">{{$artista->Name}} {{$artista->LastaName}}</option>
+                    <option value="{{$artista->id}}">{{$artista->Name}} {{$artista->LastaName}}</option>
                     @endforeach
                 </select>
                 <br>
             </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Genero</h4>
                 <hr>
                 <select class="form-control" name="idGenero">
                     @foreach($generos as $genero)
-                        <option value="{{$genero->id}}">{{$genero->NombreGenero}}</option>
+                    <option value="{{$genero->id}}">{{$genero->NombreGenero}}</option>
                     @endforeach
                 </select>
                 <br>
@@ -108,9 +108,11 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    console.log('Hi!');
+</script>
 @stop

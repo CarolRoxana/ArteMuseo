@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<p class="text-center">Crear Genero</p>
+<h5 class="text-center"><b>Crear Genero</b></h5>
 
 <div class="container">
     <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/genero' }}" method="POST">
