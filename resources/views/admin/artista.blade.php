@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<p class="text-center">Crear Artista</p>
+<h5 class="text-center"><b>Crear Artista<b></h5>
 
 <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/artista' }}" method="POST">
     @csrf

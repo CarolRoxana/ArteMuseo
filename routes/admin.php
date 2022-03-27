@@ -64,6 +64,7 @@ Route::get('/facturas', [FacturaController::class, 'index']);
 Route::get('/factura', function () {
     return view('admin.factura');
 });
+Route::post('/factura', [FacturaController::class, 'store']);
 
 Route::get('/roles', [RolController::class, 'index']);
 Route::get('/rol', function () {
