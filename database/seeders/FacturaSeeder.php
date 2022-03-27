@@ -23,7 +23,8 @@ class FacturaSeeder extends Seeder
             'IvaPorcentaje' => 223.75,
             'PrecioTotal' => 4698.75,
             'EstadoVenta' => 'Vendido',
-            'idObra' => 1
+            'idObra' => 1,
+            'idUser' => 1,
         ]);
     }
 }

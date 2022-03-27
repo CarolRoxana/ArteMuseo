@@ -264,9 +264,9 @@ return [
             'url'        => 'admin/facturas',
         ],
         [
-            'text'       => 'Compras',
+            'text'       => 'Mis Compras',
             'icon_color' => 'yellow',
-            'url'        => '#',
+            'url'        => 'admin/compras',
         ],
         [
             'text'       => 'Genero',
