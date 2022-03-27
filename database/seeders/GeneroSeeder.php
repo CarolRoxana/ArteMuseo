@@ -18,5 +18,20 @@ class GeneroSeeder extends Seeder
             'NombreGenero' => 'Arte',
             'bool' => 0
         ]);
+
+        Genero::create([
+            'NombreGenero' => 'Escultura',
+            'bool' => 0
+        ]);
+
+        Genero::create([
+            'NombreGenero' => 'Pintura',
+            'bool' => 0
+        ]);
+
+        Genero::create([
+            'NombreGenero' => 'Barro',
+            'bool' => 0
+        ]);
     }
 }

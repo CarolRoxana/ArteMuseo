@@ -19,8 +19,28 @@ class DetallegeneroSeeder extends Seeder
             'idGenero' => '1'
         ]);
         DetalleGenero::create([
-            'nombre' => 'Tipo',
+            'nombre' => 'Corporal',
             'idGenero' => '1'
+        ]);
+
+        DetalleGenero::create([
+            'nombre' => 'Figura',
+            'idGenero' => '2'
+        ]);
+
+        DetalleGenero::create([
+            'nombre' => 'Abstracta',
+            'idGenero' => '3'
+        ]);
+
+        DetalleGenero::create([
+            'nombre' => 'Pesado',
+            'idGenero' => '4'
+        ]);
+
+        DetalleGenero::create([
+            'nombre' => 'arquitectura',
+            'idGenero' => '4'
         ]);
     }
 }

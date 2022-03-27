@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use App\Models\RolPermiso;
 use Illuminate\Database\Seeder;
 
@@ -53,6 +54,5 @@ class RolesPermisosSeeder extends Seeder
             'idRol' => 2,
             'idPermiso' => 2
         ]);
-        
     }
 }

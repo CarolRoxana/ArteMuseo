@@ -15,8 +15,8 @@ class ObraDetalleSeeder extends Seeder
     public function run()
     {
         ObraDetalle::create([
-            'descripcion' => 'Bonita y funcional',
-            'idDetalleGenero' => 2,
+            'descripcion' => 'Expresiva',
+            'idDetalleGenero' => 1,
             'idObra' => 1
         ]);
     }
