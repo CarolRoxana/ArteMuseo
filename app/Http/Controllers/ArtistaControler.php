@@ -62,7 +62,7 @@ class ArtistaControler extends Controller
         $artista->FechaNacimiento = $request->FechaNacimiento;
         $artista->Nacionalidad = $request->Nacionalidad;
         $artista->Biografia = $request->Biografia;
-        $artista->Pord¿centaje = $request->Porcentaje;
+        $artista->Porcentaje = $request->Porcentaje;
         $artista->save();
 
         return Redirect::to(url('/admin/artistas'));

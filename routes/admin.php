@@ -45,7 +45,7 @@ Route::get('/artista', function () {
 });
 Route::post('/artista', [ArtistaControler::class, 'store']);
 Route::get('/artista/edit/{id}', [ArtistaControler::class, 'edit']);
-Route::put('/artista/update/{id}', [ArtistaControler::class, 'update']);
+Route::post('/artista/update/{id}', [ArtistaControler::class, 'update']);
 Route::delete('/artista/{id}', [ArtistaControler::class, 'destroy']);
 
 Route::get('/generos', [GeneroController::class, 'index']);
