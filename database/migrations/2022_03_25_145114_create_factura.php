@@ -25,6 +25,8 @@ class CreateFactura extends Migration
             $table->string('EstadoVenta');
             $table->integer('idObra')->unsigned();
             $table->foreign('idObra')->references('id')->on('obra');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users');
             $table->timestamps();
         });
     }

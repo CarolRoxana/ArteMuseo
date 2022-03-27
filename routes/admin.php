@@ -10,6 +10,7 @@ use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\ModuloController;
 use App\Http\Controllers\PermisoController;
+use App\Http\Controllers\CompraController;
 
 
 /*
@@ -28,6 +29,7 @@ Route::get('/', [ObraController::class, 'index']);
 Route::get('/usuarios', [UsuarioController::class, 'index']);
 Route::get('/usuario', [UsuarioController::class, 'create']);
 Route::post('/usuario', [UsuarioController::class, 'store']);
+Route::get('/compras', [CompraController::class, 'index']);
 
 Route::get('/obras/{estado}', [ObraController::class, 'indexBase']);
 Route::get('/obras', [ObraController::class, 'index']);
