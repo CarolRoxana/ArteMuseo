@@ -20,71 +20,35 @@
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center">Contraseña</h4>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="contrasena">
+                <input class="form-control border-0 bg-light shadow-sm" type="password" name="password">
                 <hr>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center">Email</h4>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="Email">
+                <input class="form-control border-0 bg-light shadow-sm" type="email" name="email">
                 <hr>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Nick name</h4>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="name">
+                <h4 class=" text-center">Nickname</h4>
+                <input class="form-control border-0 bg-light shadow-sm" type="text" name="Nickname">
                 <hr>
             </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Tipo usuario</h4>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="">
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" >
+                <h4 class=" text-center ">Rol</h4>
                 <hr>
-            </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Tipo tarjeta</h4>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="">
-                <hr>
-            </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Código</h4>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="codigo">
-                <hr>
-            </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Pregunta de seguridad 1</h4>
-                <select class="form-select form-select-lg mb-3 selectpicker" style="margin-left: 30%" aria-label=".form-select-lg example">
-                    <option selected>Pregunta de seguridad</option>
-                    <option value="1">Nombre Mascota</option>
-                    <option value="2">Nombre Mama</option>
-                    <option value="3">Comida Favorita</option>
-                    <option value="3">Lugar Favorito</option>
+                <select class="form-control" name="idRol">
+                    @foreach($roles as $rol)
+                        <option value="{{$rol->id}}">{{$rol->Nombre}}</option>
+                    @endforeach
                 </select>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="respuesta">
-                <hr>
+                <br>
             </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Pregunta de seguridad 2</h4>
-                <select class="form-select form-select-lg mb-3 selectpicker" style="margin-left: 30%" aria-label=".form-select-lg example">
-                    <option selected>Pregunta de seguridad</option>
-                    <option value="1">Nombre Mascota</option>
-                    <option value="2">Nombre Mama</option>
-                    <option value="3">Comida Favorita</option>
-                    <option value="3">Lugar Favorito</option>
-                </select>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="respuesta">
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto" style="display: none">
+                <h4 class=" text-center ">Bool</h4>
                 <hr>
+                <input class="form-control border-0 bg-light shadow-sm" type="number" value="0" name="bool">
+                <br>
             </div>
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center">Pregunta de seguridad 3</h4>
-                <select class="form-select form-select-lg mb-3 selectpicker" style="margin-left: 30%" aria-label=".form-select-lg example">
-                    <option selected>Pregunta de seguridad</option>
-                    <option value="1">Nombre Mascota</option>
-                    <option value="2">Nombre Mama</option>
-                    <option value="3">Comida Favorita</option>
-                    <option value="3">Lugar Favorito</option>
-                </select>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="respuesta">
-                <hr>
-            </div>
-
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
