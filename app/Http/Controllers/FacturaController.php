@@ -17,6 +17,7 @@ class FacturaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'id' => 'required',
             'Codigofactura' => 'required',
             'FechaCompra' => 'required',
             'TipoCompra' => 'required',
