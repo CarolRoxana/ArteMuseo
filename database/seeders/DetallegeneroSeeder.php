@@ -18,5 +18,9 @@ class DetallegeneroSeeder extends Seeder
             'nombre' => 'Digital',
             'idGenero' => '1'
         ]);
+        DetalleGenero::create([
+            'nombre' => 'Tipo',
+            'idGenero' => '1'
+        ]);
     }
 }

@@ -14,7 +14,7 @@
         @csrf
         <div class="row">
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-                <h4 class=" text-center ">Nombre Genero</h4>
+                <h4 class=" text-center ">Nombre</h4>
                 <hr>
                 <input class="form-control border-0 bg-light shadow-sm" type="text" name="Name">
                 <br>

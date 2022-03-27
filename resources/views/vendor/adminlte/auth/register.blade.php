@@ -95,7 +95,7 @@
 @section('auth_footer')
     <p class="my-0">
         <a href="{{ $login_url }}">
-            {{ __('adminlte::adminlte.i_already_have_a_membership') }}
+            Ya estoy registrado
         </a>
     </p>
 @stop
