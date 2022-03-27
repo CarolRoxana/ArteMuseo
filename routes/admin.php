@@ -69,9 +69,9 @@ Route::get('/pregunta', function () {
 });
 
 Route::get('/facturas', [FacturaController::class, 'index']);
-Route::get('/factura', function () {
-    return view('admin.factura');
-});
+Route::get('/factura', [FacturaController::class, 'create']);
+Route::post('/factura', [FacturaController::class, 'store']);
+Route::get('/facturaCompletar/{id}', [FacturaController::class, 'compra']);
 
 Route::get('/roles', [RolController::class, 'index']);
 Route::get('/rol', function () {

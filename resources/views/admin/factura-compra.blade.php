@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<h5 class="text-center"> <b>Crear Factura </b></h5>
+<h5 class="text-center"> <b>Completar Factura </b></h5>
 
 <div class="container">
     <form class="bg-white py-2 px-4 shadow rounded mg-2" action="{{ '/admin/factura' }}" method="POST">
@@ -70,13 +70,13 @@
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Iva Porcentaje</h4>
                 <hr>
-                <input class="form-control border-0 bg-light shadow-sm" type="number" name="IvaPorcentaje">
+                <input class="form-control border-0 bg-light shadow-sm" type="number" value="{{$obraDetalles->Porcentaje}}" name="IvaPorcentaje">
                 <br>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <h4 class=" text-center ">Precio Total</h4>
                 <hr>
-                <input class="form-control border-0 bg-light shadow-sm" type="text" name="PrecioTotal">
+                <input class="form-control border-0 bg-light shadow-sm" type="text" value="{{$obraDetalles->Precio}}" name="PrecioTotal">
                 <br>
             </div>
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
