@@ -5,19 +5,24 @@
 @section('content_header')
 
 <h1 style="display: inline-block">Obras</h1>
-<button style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" onclick="window.location='obra'">Añadir Obras</button>
+<a style="margin-left: 60%; display: inline-block" class="btn btn-success" type="button" href="{{url('/')}}/admin/obra">
+    Añadir Obras
+</a>
 <br>
-<p>Estado de obra:</p>
+<p>Filtrar por estado de obra:</p>
 <div>
-    <input type="radio" id="contactChoice1" name="contact" value="email">
-    <label for="contactChoice1">Vendido</label>
-
-    <input type="radio" id="contactChoice2" name="contact" value="phone">
-    <label for="contactChoice2">Reservado</label>
-
-    <input type="radio" id="contactChoice3" name="contact" value="mail">
-    <label for="contactChoice3">Disponible</label>
-    <button style="margin-left: 60%; display: inline-block; margin-top: -70px" class="btn btn-primary" type="button" onclick="window.location='obras_filtro'">Filtrar Obras por estado</button>
+    <a title="Detalles" class="btn btn-secondary" href="{{url('/')}}/admin/obras/all">
+        Todas las obras
+    </a>
+    <a title="Detalles" class="btn btn-secondary" href="{{url('/')}}/admin/obras/vendidas">
+        Obras Vendidas
+    </a>
+    <a title="Detalles" class="btn btn-secondary" href="{{url('/')}}/admin/obras/reservadas">
+        Obras Reservadas
+    </a>
+    <a title="Detalles" class="btn btn-secondary" href="{{url('/')}}/admin/obras/disponibles">
+        Obras Disponibles
+    </a>
 </div>
 @stop
 
@@ -52,8 +57,15 @@
                     @if($row->Estado =='Disponible')
                     <button class="btn btn-primary">Comprar</button>
                     @endif
-                    <button class="btn btn-success">Detalles</button>
+                    <a title="Detalles" class="btn btn-success" href="{{url('/')}}/admin/obraDetalles/{{$row->id}}">
+                        Detalles
+                    </a>
+                    <a title="gestionar" class="btn btn-warning" href="{{url('/')}}/admin/obraGestionarDetalles/{{$row->id}}">
+                        Gestionar detalles
+                    </a>
                 </td>
+
+
 
             </tr>
             @endforeach

@@ -243,7 +243,7 @@ return [
         ],
         [
             'text'        => 'Obras',
-            'url'         => 'admin/obras',
+            'url'         => 'admin/obras/all',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
@@ -272,16 +272,6 @@ return [
             'text'       => 'Genero',
             'icon_color' => 'cyan',
             'url'        => 'admin/generos',
-        ],
-        [
-            'text'       => 'Membresia',
-            'icon_color' => 'blue',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'Preguntas de seguridad',
-            'icon_color' => 'orange',
-            'url'        => 'admin/preguntas',
         ],
         [
             'text'       => 'Roles',

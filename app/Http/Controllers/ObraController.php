@@ -6,17 +6,32 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\Obra;
 use App\Models\Artista;
 use App\Models\Genero;
+use App\Models\DetalleGenero;
+use App\Models\ObraDetalle;
 use Illuminate\Http\Request;
 
 class ObraController extends Controller
 {
-    function index()
+    function index($estado)
     {
-        $obras = Obra::where('bool', 0)->get();
-        //dd($obras);
-        //$user = auth()->user()->id;
-        //dd($user);
-        return view('admin.obras', compact('obras'));
+        if ($estado == "vendidas") {
+            $obras = Obra::where('bool', 0)
+                ->where('Estado', 'Vendida')
+                ->get();
+        } else if ($estado == "reservadas") {
+            $obras = Obra::where('bool', 0)
+                ->where('Estado', 'Reservada')
+                ->get();
+        } else if ($estado == "disponibles") {
+            $obras = Obra::where('bool', 0)
+                ->where('Estado', 'Disponible')
+                ->get();
+        } else {
+            $obras = Obra::where('bool', 0)->get();
+            $estado = "all";
+        }
+
+        return view('admin.obras', compact('obras', 'estado'));
     }
 
     function create()
@@ -38,18 +53,37 @@ class ObraController extends Controller
         }
         Obra::create($request->all());
 
-        return Redirect::to(url('/admin/obras'));
+        return Redirect::to(url('/admin/obras/all'));
     }
 
-    function index_filtro()
+
+    public function obraDetalle($id)
     {
-        $obras = \DB::table('obra')
-            ->leftJoin('genero', 'obra.idGenero', 'genero.id')
-            ->leftJoin('artistaobra', 'obra.id', 'artistaobra.idObra')
-            ->leftJoin('artista', 'obra.id', 'artista.id')
-            ->where('obra.estado', 'Disponible')
-            ->select('obra.*', 'genero.NombreGenero as genero', 'artista.Name as artistaNombre', 'artista.Lastaname as artistaApellido')
-            ->get();
-        return view('admin.obras', compact('obras'));
+        $obra = Obra::where('id', $id)->first();
+        $detalles = ObraDetalle::where('idObra', $id)->get();
+
+        return view('admin.obra-show', compact('obra', 'detalles'));
+    }
+
+    public function obraGestionarDetalle($id)
+    {
+        $obra = Obra::where('id', $id)->first();
+        $generoDetalles = DetalleGenero::where('idGenero', $obra->idGenero)->get();
+        $detalles = ObraDetalle::where('idObra', $id)->get();
+
+        return view('admin.obra-detalles', compact('obra', 'detalles', 'generoDetalles'));
+    }
+
+    public function obraDetalleStore(Request $request)
+    {
+
+        ObraDetalle::create($request->all());
+        return Redirect::to(url('/admin/obraGestionarDetalles/' . $request->idObra));
+    }
+
+    public function obraDetalleDestroy($obra, $id)
+    {
+        obraDetalle::destroy($id);
+        return Redirect::to(url('/admin/obraGestionarDetalles/' . $obra));
     }
 }

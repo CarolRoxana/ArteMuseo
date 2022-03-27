@@ -11,4 +11,8 @@ class DetalleGenero extends Model
     protected $fillable = [
         'nombre', 'idGenero'
     ];
+
+    public function genero(){
+        return $this->belongsTo("App\Models\Genero","idGenero","id");
+    }
 }

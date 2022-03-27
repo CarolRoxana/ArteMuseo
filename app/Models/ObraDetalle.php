@@ -9,6 +9,14 @@ class ObraDetalle extends Model
 {
     public $table = 'obradetalle';
     protected $fillable = [
-        'descripcion', 'ideDetalleGenero', 'idObra'
+        'descripcion', 'idDetalleGenero', 'idObra'
     ];
+
+    public function generoDetalle(){
+        return $this->belongsTo("App\Models\DetalleGenero","idDetalleGenero","id");
+    }
+
+    public function obra(){
+        return $this->belongsTo("App\Models\Obra","idObra","id");
+    }
 }

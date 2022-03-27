@@ -33,6 +33,10 @@
                             Editar
                         </a>
 
+                        <a title="gestionar" class="btn btn-warning" href="{{url('/')}}/admin/generoDetalle/{{$row->id}}">
+                            Gestionar detalles
+                        </a>
+
                         @csrf
                         @method('DELETE')
 

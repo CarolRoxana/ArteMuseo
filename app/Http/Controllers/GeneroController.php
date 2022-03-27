@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Genero;
+use App\Models\DetalleGenero;
+use App\Models\ObraDetalle;
 
 class GeneroController extends Controller
 {
@@ -52,5 +54,27 @@ class GeneroController extends Controller
         $genero->save();
 
         return Redirect::to(url('/admin/generos'));
+    }
+
+    public function generoDetalle($id)
+    {
+        $genero = Genero::where('id', $id)->first();
+        $detalles = DetalleGenero::where('idGenero', $id)->get();
+
+        return view('admin.genero-detalles', compact('genero', 'detalles'));
+    }
+
+    public function generoDetalleStore(Request $request)
+    {
+          
+        DetalleGenero::create($request->all());
+        return Redirect::to(url('/admin/generoDetalle/'.$request->idGenero));
+    }
+
+    public function generoDetalleDestroy($genero, $id)
+    {   
+        ObraDetalle::where('idDetalleGenero', '=', $id)->delete();
+        DetalleGenero::destroy($id);
+        return Redirect::to(url('/admin/generoDetalle/'.$genero));
     }
 }
