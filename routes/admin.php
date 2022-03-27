@@ -26,12 +26,11 @@ use App\Http\Controllers\PermisoController;
 Route::get('/', [ObraController::class, 'index']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
-Route::get('/usuarios_registrado', [UsuarioController::class, 'index_registrado']);
-Route::get('/usuario', function () {
-    return view('admin.usuario');
-});
+Route::get('/usuario', [UsuarioController::class, 'create']);
+Route::post('/usuario', [UsuarioController::class, 'store']);
 
-Route::get('/obras/{estado}', [ObraController::class, 'index']);
+Route::get('/obras/{estado}', [ObraController::class, 'indexBase']);
+Route::get('/obras', [ObraController::class, 'index']);
 Route::get('/obras_filtro', [ObraController::class, 'index_filtro']);
 Route::get('/obra', [ObraController::class, 'create']);
 Route::post('/obra', [ObraController::class, 'store']);

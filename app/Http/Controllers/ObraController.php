@@ -11,7 +11,15 @@ use Illuminate\Http\Request;
 
 class ObraController extends Controller
 {
-    function index($estado)
+    function index()
+    {    
+        $obras = Obra::where('bool', 0)->get();
+        $estado = "all";
+
+        return view('admin.obras', compact('obras', 'estado'));
+    }
+
+    function indexBase($estado)
     {    
         if($estado == "vendidas"){
             $obras = Obra::where('bool', 0)
