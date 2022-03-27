@@ -55,7 +55,9 @@
                 <td class="bg-warning">{{ $row->artista->Name }} {{ $row->artista->LastaName }}</td>
                 <td class="bg-succes">
                     @if($row->Estado =='Disponible')
-                    <button class="btn btn-primary">Comprar</button>
+                    <a title="comprar" class="btn btn-primary" href="{{url('/')}}/admin/facturaCompletar/{{$row->id}}">
+                        Comprar
+                    </a>
                     @endif
                     <a title="Detalles" class="btn btn-success" href="{{url('/')}}/admin/obraDetalles/{{$row->id}}">
                         Detalles
@@ -64,6 +66,8 @@
                         Gestionar detalles
                     </a>
                 </td>
+
+
 
 
 
